@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "set PORT=9000 & set DEBUG=myapp:* & start npm run mailhog & npx nodemon start -e js,hbs",
+    "dev": "set PORT=9000 & set DEBUG=myapp:* & nodemon start -e js,hbs",
     "mailhog": "cd mailhog & mailhog",
     "test": "mocha -R spec --exit",
     "dump": "mysqldump -u root -p --databases express_checkout > ./database/db.sql"
@@ -29,5 +29,8 @@
     "url": "github.com/KendraLynn/lab4-express"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
 }
